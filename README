@@ -11,7 +11,12 @@ Description:
 Requirements:
   A copy of TUXGuitar is required for this tool to function properly.
 
+To compile:
+  run command:
+    gradlew shadowJar
+  the result jar will be located at build/libs/
+
 Usage:
-  cat song.tg | tuxguitar.(sh|bat)
+  cat song.tg | java -jar TUXGFormat.jar
     OR
-  tuxguitar.(sh|bat) song.tg
+  java -jar TUXGFormat.jar song.tg

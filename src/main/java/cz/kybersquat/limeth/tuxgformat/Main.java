@@ -8,12 +8,18 @@ import org.herac.tuxguitar.io.base.TGFileFormatException;
 import org.herac.tuxguitar.io.tg.TGInputStream;
 import org.herac.tuxguitar.song.models.*;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.Arrays;
 
 public class Main
 {
     public static void main(String[] args) throws TGFileFormatException, FileNotFoundException
     {
+	    System.out.println(Arrays.stream(args).reduce(null, (a, b) -> a == null ? b : a + " " + b));
+
 	    InputStream rawInput;
 
 	    if(args.length <= 0)

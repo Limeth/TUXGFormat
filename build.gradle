@@ -1,17 +1,20 @@
 plugins {
     id "java"
+    id "application"
     id "com.github.johnrengelman.shadow" version "1.2.1"
 }
 
 sourceCompatibility = 1.8
 version = '1.0'
+mainClassName = 'cz.kybersquat.limeth.tuxgformat.Main';
 
 repositories {
     mavenCentral()
 }
 
 def listMavenLibraries() {
-    return ['com.google.code.gson:gson:2.3.1']
+    return ['com.google.code.gson:gson:2.3.1', 'com.lowagie:itext:4.2.1']
+    //Somehow create a way to select the correct org.eclipse.swt distribution
 }
 
 //You may put the tuxguitar folder to lib/ for it to compile
@@ -29,20 +32,5 @@ dependencies {
 jar {
     manifest {
         attributes 'Main-Class': 'cz.kybersquat.limeth.tuxgformat.Main'
-    }
-
-    //THIS DOES NOT WORK AND MAY BE PRETTY OBVIOUS TO EXPERIENCED USERS.
-    listMavenLibraries().each { lib ->
-        into('/') {
-            //lib
-        }
-    }
-
-    listJarLibraries().each { lib ->
-        into('/') {
-            from {
-                zipTree(lib)
-            }
-        }
     }
 }
