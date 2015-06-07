@@ -1,0 +1,17 @@
+ _____ _____ __ __ _____ _____                   _
+|_   _|  |  |  |  |   __|   __|___ ___ _____ ___| |_
+  | | |  |  |-   -|  |  |   __| . |  _|     | .'|  _|
+  |_| |_____|__|__|_____|__|  |___|_| |_|_|_|__,|_|
+
+README
+
+Description:
+  TUXGFormat is a JSON serialization tool for TUXGuitar file formats (.tg).
+
+Requirements:
+  A copy of TUXGuitar is required for this tool to function properly.
+
+Usage:
+  cat song.tg | tuxguitar.(sh|bat)
+    OR
+  tuxguitar.(sh|bat) song.tg

@@ -1,0 +1,6 @@
+INSTALL
+
+  1) Move TUXGFormat.jar to the TUXGuitar installation directory
+  2) If you are on linux, move tuxgformat.sh to the TUXGuitar installation directory
+     If you are on windows, move tuxgformat.bat to the TUXGuitar installation directory
+  3) Run the script
